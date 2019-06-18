@@ -23,7 +23,7 @@ Download Android Studio from https://developer.android.com/studio/index.html
 
 Step 2:
 
-Visit my GitHub repository; User name phaxier and clone the following link: https://github.com/phaxier/Mychurch You can also download the files into you folder and unzip it to access the files.
+Visit my GitHub repository; User name phaxier and clone the following link: https://github.com/phaxier/MyChurch.git You can also download the files into you folder and unzip it to access the files.
 
 #Step 3:
 
