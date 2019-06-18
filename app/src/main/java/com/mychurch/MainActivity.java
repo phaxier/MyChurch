@@ -10,14 +10,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.net.DatagramSocket;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
-    @BindView(R.id.loginButton); Button mLoginButton;
+    @BindView(R.id.loginButton) Button mLoginButton;
     @BindView(R.id.appNameTextView) TextView mAppNameTextView;
     @BindView(R.id.locationTextView)  EditText mLocationEditText;
 
