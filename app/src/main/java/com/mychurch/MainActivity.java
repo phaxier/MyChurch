@@ -1,15 +1,17 @@
 package com.mychurch;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 import butterknife.BindView;
@@ -17,11 +19,11 @@ import butterknife.ButterKnife;
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG = MainActivity.class.getSimpleName();
-    @BindView(R.id.loginButton) Button mLoginButton;
+    @BindView(R.id.findChurchbutton) Button mFindChurchButton;
+    @BindView(R.id.locationEditText)EditText mLocationEditText;
     @BindView(R.id.appNameTextView) TextView mAppNameTextView;
-    @BindView(R.id.locationTextView)  EditText mLocationEditText;
 
 
     @Override
@@ -30,16 +32,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
-        mAppNameTextView.setTypeface(ostrichFont);
-        mLoginButton.setOnClickListener(new View.OnClickListener() {
+
+
+//        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
+//        mAppNameTextView.setTypeface(ostrichFont);
+
+
+        mFindChurchButton.setOnClickListener(this);
+
+        }
+
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, DailyActivity.class);
-                String location = mLocationEditText.getText().toString();
-                intent.putExtra("location", location);
-                startActivity(intent);
+            public void onClick(View v) {
+                if (v == mFindChurchButton) {
+                    String location = mLocationEditText.getText().toString();
+                    Intent intent = new Intent(MainActivity.this, DailyActivity.class);
+                    intent.putExtra("location", location);
+                    startActivity(intent);
+
+                }
             }
-        });
-    }
-}
+
+        }
+
+
