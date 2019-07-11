@@ -4,6 +4,8 @@ import android.view.View;
 
 import androidx.test.rule.ActivityTestRule;
 
+import com.mychurch.ui.DailyActivity;
+
 import org.junit.Rule;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.mychurch;
+package com.mychurch.models;
 
 public class Church {
 

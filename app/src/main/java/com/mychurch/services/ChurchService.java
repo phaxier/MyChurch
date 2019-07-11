@@ -1,8 +1,8 @@
-package com.mychurch;
+package com.mychurch.services;
 
 
 
-import com.google.android.gms.common.api.Response;
+import com.mychurch.Constants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,11 +11,13 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.mychurch.models.Church;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 
 public class ChurchService {
 
@@ -32,11 +34,12 @@ public class ChurchService {
         Request request = new Request.Builder().url(url)
                 .header("X-RapidAPI-Host",  Constants.BIBLE_TOKEN)
                 .header("X-RapidAPI-Key", Constants.BIBLE_TOKEN).build();
-    Call call = client.newCall(request);
-    call.enqueue(callback);
-    }
 
-    public ArrayList<Church> processResults(Response response) {
+        Call call = client.newCall(request);
+        call.enqueue(callback);
+
+    }
+    public ArrayList<Church> processResults(Response response){
         ArrayList<Church> dailies = new ArrayList<>();
         try {
             String jsonData = response.body().string();
@@ -63,5 +66,6 @@ e.printStackTrace();
         e.printStackTrace();
     }
     return dailies;
+}
 }
 

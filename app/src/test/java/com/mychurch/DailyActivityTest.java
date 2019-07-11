@@ -3,6 +3,8 @@ package com.mychurch;
 
 import android.widget.ListView;
 
+import com.mychurch.ui.DailyActivity;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

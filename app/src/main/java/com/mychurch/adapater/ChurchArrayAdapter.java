@@ -1,4 +1,4 @@
-package com.mychurch;
+package com.mychurch.adapater;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;

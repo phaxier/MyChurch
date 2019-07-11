@@ -1,4 +1,4 @@
-package com.mychurch;
+package com.mychurch.adapater;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
@@ -26,7 +26,7 @@ public class MyChurchArrayAdapter extends ArrayAdapter {
     public Object getItem(int i) {
         String readings = mReadings[getPosition(mReadings)];
         String prayers = mPrayers[getPosition(mPrayers)];
-        return String.format("%s \n Serves great: %s", readings, prayers);
+        return String.format("%s \n Serves great: ", readings);
 
     }
 
