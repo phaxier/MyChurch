@@ -9,10 +9,15 @@ church app with various function like daily bible reading, announcements and Ser
 
 ## Technologies used
 
-*Android Studio
-*Gradle
-*Java
-*SDK tools
+
+1. java 11
+2. SDK tools
+3. ButterKnife
+4. Gradle 4.10
+5. Android
+6. okHttp
+7. Firebase Real time database
+8. Firebase Authentication
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
